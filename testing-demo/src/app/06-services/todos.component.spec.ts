@@ -56,7 +56,7 @@ describe('TodosComponent', () => {
 
   it('should NOT call the server to delete a todo item if the user cancels', () => {
     spyOn(window, 'confirm').and.returnValue(false);
-    let spy = spyOn(service, 'delete').and.returnValue(Observable.empty);
+    let spy = spyOn(service, 'delete').and.returnValue(Observable.empty());
 
     component.delete(1);
 
